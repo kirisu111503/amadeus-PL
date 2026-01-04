@@ -31,7 +31,7 @@
 
 ## Overview
 
-**Amadeus** is a comprehensive development environment designed for developers who value simplicity, performance, and low-level programming. It combines a purpose-built IDE with a statically-typed programming language that compiles directly to MIPS64 assembly and machine code.
+**Amadeus** is a comprehensive development environment designed for the `amadeus programming language`.
 
 **Key Highlights:**
 - 🎨 Bioluminescent color scheme optimized for extended coding sessions
