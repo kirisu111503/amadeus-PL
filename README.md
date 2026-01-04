@@ -5,7 +5,7 @@
 ![Theme](https://img.shields.io/badge/theme-bioluminescent-121b17)
 
 <p align="center">
-  <em>A lightweight, futuristic IDE with a strictly-typed language that compiles to MIPS64 assembly</em>
+  <em>El Psy Congroo!</em>
 </p>
 
 ---
