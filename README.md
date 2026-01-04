@@ -4,114 +4,151 @@
 ![Status](https://img.shields.io/badge/status-stable-blue)
 ![Theme](https://img.shields.io/badge/theme-bioluminescent-121b17)
 
+<p align="center">
+  <em>A lightweight, futuristic IDE with a strictly-typed language that compiles to MIPS64 assembly</em>
+</p>
+
+---
+
+## 📋 Table of Contents
+
+- [Overview](#overview)
+- [Screenshots](#screenshots)
+- [Amadeus IDE](#amadeus-ide)
+  - [Design Philosophy](#design-philosophy)
+  - [Core Features](#core-features)
+  - [Keyboard Shortcuts](#keyboard-shortcuts)
+- [Amadeus Programming Language](#amadeus-programming-language)
+  - [Language Characteristics](#language-characteristics)
+  - [Type System](#type-system)
+  - [Syntax Guide](#syntax-guide)
+- [Installation & Setup](#installation--setup)
+- [Getting Started](#getting-started)
+- [Current Limitations](#current-limitations)
+- [License](#license)
+
 ---
 
 ## Overview
 
-Amadeus is a comprehensive development environment comprising a lightweight IDE and a strictly-typed programming language that compiles directly to MIPS64 assembly and machine code. The system is designed for developers seeking a minimalist, efficient toolchain with a focus on low-level programming and performance.
+**Amadeus** is a comprehensive development environment designed for developers who value simplicity, performance, and low-level programming. It combines a purpose-built IDE with a statically-typed programming language that compiles directly to MIPS64 assembly and machine code.
+
+**Key Highlights:**
+- 🎨 Bioluminescent color scheme optimized for extended coding sessions
+- ⚡ Single-pass compiler with atomic output generation
+- 🔧 Integrated build system with real-time console output
+- 📁 Built-in project explorer and file management
+- ⌨️ Comprehensive keyboard shortcuts for efficient workflow
 
 ---
 
-## Table of Contents
+## Screenshots
 
-1. [Amadeus IDE](#amadeus-ide)
-2. [The Amadeus Programming Language](#the-amadeus-programming-language)
-3. [Installation & Setup](#installation--setup)
-4. [Getting Started](#getting-started)
+<img width="1919" alt="Amadeus IDE - Code Editor View" src="https://github.com/user-attachments/assets/bb508713-270a-41ad-aae6-223e8ee8bc30" />
+
+<img width="1919" alt="Amadeus IDE - Console Output" src="https://github.com/user-attachments/assets/ce290ff2-a915-49ad-a490-c5526e73d7ed" />
 
 ---
 
 ## Amadeus IDE
 
-### Introduction
-
-Amadeus IDE is a purpose-built integrated development environment featuring a bioluminescent color scheme optimized for extended coding sessions. The interface prioritizes functionality and visual comfort, offering essential development tools without unnecessary complexity.
-
 ### Design Philosophy
 
-The IDE employs a carefully curated color palette designed to minimize eye strain during prolonged use:
+Amadeus IDE features a carefully curated **bioluminescent color palette** designed to minimize eye strain during prolonged coding sessions:
 
-- **Background**: Deep Organic Black (`#121b17`)
-- **Primary Text**: Soft Mint Green (`#d0e8d8`)
-- **Accent Elements**: Glowing Emerald (`#4db68d`)
-- **Error Indicators**: Muted Red (`#e57373`)
+| Element | Color | Hex Code |
+|---------|-------|----------|
+| Background | Deep Organic Black | `#121b17` |
+| Primary Text | Soft Mint Green | `#d0e8d8` |
+| Accent Elements | Glowing Emerald | `#4db68d` |
+| Error Indicators | Muted Red | `#e57373` |
 
 ### Core Features
 
-#### Project Management
-The integrated project explorer provides a hierarchical view of your workspace, enabling efficient file navigation, creation, and organization directly within the IDE.
+#### 📁 Project Management
+Integrated project explorer with hierarchical workspace view for efficient file navigation, creation, and organization.
 
-#### Code Editor
-The editor includes specialized support for Amadeus syntax with intelligent highlighting, multi-file tabbed editing, and adaptive line numbering that scales with file size.
+#### ✏️ Smart Code Editor
+- **Syntax Highlighting**: Custom lexer integration for Amadeus language
+- **Multi-file Support**: Tabbed interface with drag-and-drop functionality
+- **Adaptive Line Numbers**: Automatically scales with file size
+- **Word Wrap**: Toggle long line wrapping with `Alt + Z`
 
-#### View Customization
-Adjust your editing environment with dynamic zoom controls (`Ctrl + Scroll` or `Ctrl +/-`) and optional word wrapping (`Alt + Z`) for handling lengthy code lines.
+#### 🎯 View Customization
+- **Dynamic Zoom**: Scale text size using `Ctrl + Scroll` or `Ctrl +/-`
+- **Flexible Layout**: Resizable panels and customizable workspace
 
-#### Integrated Build System
-Execute your code with a single keystroke (`F5`). The IDE runs compilation in a separate thread to maintain UI responsiveness, with stdout and stderr displayed in the built-in console.
+#### ⚙️ Integrated Build System
+- **One-Click Execution**: Compile and run with `F5`
+- **Non-blocking Compilation**: Runs in separate thread to maintain UI responsiveness
+- **Built-in Console**: View `stdout` and `stderr` in real-time
 
-### Keyboard Shortcuts Reference
+### Keyboard Shortcuts
 
 #### File Operations
-- **New File**: `Ctrl + N`
-- **Open File**: `Ctrl + O`
-- **Open Folder**: `Ctrl + Shift + O`
-- **Save File**: `Ctrl + S`
-- **Close Tab**: `Ctrl + W`
-- **Rename**: `F2`
+| Action | Shortcut |
+|--------|----------|
+| New File | `Ctrl + N` |
+| Open File | `Ctrl + O` |
+| Open Folder | `Ctrl + Shift + O` |
+| Save File | `Ctrl + S` |
+| Close Tab | `Ctrl + W` |
+| Rename | `F2` |
 
 #### Editor Controls
-- **Toggle Word Wrap**: `Alt + Z`
-- **Zoom In**: `Ctrl + +` or `Ctrl + Scroll Up`
-- **Zoom Out**: `Ctrl + -` or `Ctrl + Scroll Down`
+| Action | Shortcut |
+|--------|----------|
+| Toggle Word Wrap | `Alt + Z` |
+| Zoom In | `Ctrl + +` or `Ctrl + Scroll Up` |
+| Zoom Out | `Ctrl + -` or `Ctrl + Scroll Down` |
 
 #### Execution
-- **Compile & Run**: `F5`
+| Action | Shortcut |
+|--------|----------|
+| Compile & Run | `F5` |
 
 ---
 
-## The Amadeus Programming Language
+## Amadeus Programming Language
 
 ### Language Characteristics
 
-Amadeus is a statically-typed, imperative programming language with C-like syntax that compiles directly to MIPS64 assembly (little-endian). The compiler implements a single-pass architecture, performing syntax analysis, semantic validation, and code generation in one unified process.
+Amadeus is a **statically-typed, imperative programming language** with C-like syntax that compiles directly to MIPS64 assembly (little-endian).
 
-### Key Features
+**Compiler Architecture:**
+- ✅ Single-pass compilation (syntax analysis + semantic validation + code generation)
+- ✅ Compile-time type checking
+- ✅ Automatic memory management (stack and data segment allocation)
+- ✅ Atomic compilation (failed builds automatically discard corrupted output)
 
-- **Target Architecture**: MIPS64 (Little Endian)
-- **Type System**: Static typing with compile-time validation
-- **Compilation Model**: Single-pass with atomic output generation
-- **Memory Model**: Automatic stack and data segment allocation
-- **Error Handling**: Atomic compilation—corrupted output is automatically discarded on compilation failure
-
----
-
-## Language Specification
+**Target Specifications:**
+- **Architecture**: MIPS64 (Little Endian)
+- **Output Formats**: MIPS64 Assembly (`.asm`) and Binary Machine Code
 
 ### Type System
 
-Amadeus supports two primitive types:
+Amadeus currently supports two primitive types:
 
 | Type | Keyword | Size | Range | Description |
 |------|---------|------|-------|-------------|
-| Integer | `int` | 64-bit | −9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 | Signed integer type |
-| Character | `char` | 8-bit | 0–255 | ASCII character storage |
+| **Integer** | `int` | 64-bit | −9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 | Signed integer type |
+| **Character** | `char` | 8-bit | 0–255 | ASCII character storage |
 
-### Variable Declaration
+### Syntax Guide
 
-Variables must be declared before use. Identifiers must begin with a letter or underscore, followed by any combination of letters, digits, or underscores.
+#### Variable Declaration
 
-**Syntax Patterns**:
+Variables must be declared before use. Identifiers must start with a letter or underscore, followed by alphanumeric characters or underscores.
 
 ```c
-int a;                    // Declaration without initialization
-char b = 'A';             // Declaration with initialization
-int x, y = 10, z;         // Multiple declarations (comma-separated)
+int a;                 
+char b = 'A';            
+int x, y = 10, z;      
 ```
 
-### Expressions and Operators
+#### Arithmetic Expressions
 
-The language supports standard arithmetic operations with proper precedence handling (PEMDAS/BODMAS):
+Standard operator precedence (PEMDAS/BODMAS) is enforced:
 
 | Operator | Description | Precedence |
 |----------|-------------|------------|
@@ -120,61 +157,55 @@ The language supports standard arithmetic operations with proper precedence hand
 | `*`, `/` | Multiplication, Division | Medium |
 | `+`, `-` | Addition, Subtraction | Low |
 
-**Example**:
+**Example:**
 ```c
-int result = 10 + 5 * (20 - 4) / 2;  // Evaluates to: 10 + 5 * 16 / 2 = 50
+int result = 10 + 5 * (20 - 4) / 2;  
 ```
 
-### Increment and Decrement Operators
+#### Increment & Decrement Operators
 
-Both prefix and postfix forms are supported, mapping directly to MIPS `daddiu` instructions:
+Pre- and post-increments and decrements:
 
 ```c
-value++;    // Post-increment: use current value, then add 1
-++value;    // Pre-increment: add 1, then use new value
-value--;    // Post-decrement: use current value, then subtract 1
---value;    // Pre-decrement: subtract 1, then use new value
+value++;   
+++value;  
+value--;  
+--value;   
 ```
 
-### Output Operations
+#### Output Operations
 
 The `cdisplay()` function provides type-aware output:
 
-**Syntax**:
 ```c
 cdisplay(expression);
 ```
 
-**Behavior**:
-- **Integer values**: Display as decimal numbers
-- **Character values**: Display as ASCII characters (when in valid range 0–127)
+**Behavior:**
+- **Integer**: Displays as decimal number
+- **Character**: Displays as ASCII character (valid range: 0–127)
 
-**Example**:
+**Example:**
 ```c
 int num = 100;
 char letter = 100;
 
-cdisplay(num);      // Output: 100
-cdisplay(letter);   // Output: d
+cdisplay(num);  
+cdisplay(letter);   
 ```
 
----
-
-## Complete Example Program
+#### Complete Example Program
 
 ```c
-// Variable declarations with initialization
 int count = 10;
 int step = 2;
-char status = 79;    // ASCII value for 'O'
+char status = 79;   
 
-// Arithmetic operations
 count = count * step;
 count++;
 
-// Output operations
-cdisplay(status);    // Displays: O
-cdisplay(count);     // Displays: 21
+cdisplay(status);  
+cdisplay(count); 
 ```
 
 ---
@@ -184,63 +215,123 @@ cdisplay(count);     // Displays: 21
 ### System Requirements
 
 - **Operating System**: Windows 10 or Windows 11
-- **Runtime**: Python 3.7 or higher (for source execution)
+- **Runtime**: Python 3.7 or higher
 - **Required Files**:
+  - `amadeus.py` (IDE main application)
   - `lexer.py` (lexical analyzer module)
+  - `custom_languageIDE.py` (custom language support)
   - `a.exe` (Amadeus compiler executable)
+  - `ico.png` (application icon)
+  - `close.png` (UI assets)
 
 ### Installation Steps
 
-1. Clone or download the Amadeus IDE repository
-2. Verify that `lexer.py` and `a.exe` are present in the root directory
-3. Launch the IDE:
+1. **Clone the repository**:
    ```bash
-   python main.py
+   git clone https://github.com/kirisu111503/amadeus-PL.git
+   cd amadeus-PL
    ```
 
-### Directory Structure
+2. **Verify required files** are present in the root directory:
+   - `amadeus.py`
+   - `lexer.py`
+   - `custom_languageIDE.py`
+   - `ico.png`
+   - `close.png`
+   - `a.exe`
+
+3. **Launch the IDE**:
+   ```bash
+   python amadeus.py
+   ```
+
+### Project Structure
 
 ```
-amadeus-ide/
-├── main.py           # IDE entry point
-├── lexer.py          # Syntax highlighting and lexical analysis
-├── a.exe             # Amadeus compiler
-└── README.md         # This documentation
+amadeus-PL/
+├── amadeus.py                  # IDE entry point
+├── lexer.py                    # Syntax highlighting and lexical analysis
+├── custom_languageIDE.py       # Custom language support module
+├── a.exe                       # Amadeus compiler
+├── ico.png                     # Application icon
+├── close.png                   # UI assets
+└── README.md                   # This documentation
 ```
 
 ---
 
 ## Getting Started
 
-1. Launch the IDE using `python main.py`
-2. Create a new file (`Ctrl + N`) or open an existing project (`Ctrl + Shift + O`)
-3. Write your Amadeus code using the syntax described above
-4. Save your file with the `.amd` extension (recommended)
-5. Press `F5` to compile and execute
-6. View output in the integrated console panel
+1. **Launch** the IDE: `python amadeus.py`
+2. **Create** a new file: `Ctrl + N` or open an existing project: `Ctrl + Shift + O`
+3. **Write** your Amadeus code following the syntax guide above
+4. **Save** your file with the `.amd` extension (recommended)
+5. **Compile & Run**: Press `F5`
+6. **View output** in the integrated console panel
+
+### Quick Example
+
+Create a file named `hello.amd`:
+
+```c
+char h = 72;  // 'H'
+char i = 105; // 'i'
+
+cdisplay(h);
+cdisplay(i);
+```
+
+Press `F5` to compile and run. The console will display: `Hi`
 
 ---
 
-## Important Notes
+## Current Limitations
 
-### Current Limitations
+> **⚠️ Important**: Please be aware of the following features currently under development:
 
-Please be aware of the following language features that are currently unavailable:
+### 🚧 Comments
+The Amadeus language does not yet support comment syntax. All code must be executable—documentation and notes cannot be embedded within source files at this time.
 
-**Comments**  
-The Amadeus language does not yet support comment syntax. All code must be executable; documentation and notes cannot be embedded within source files at this time.
+### 🚧 String Literals
+String data types and string literal support are currently in development. The language presently supports only `int` and `char` types. String functionality will be available in a future release.
 
-**String Literals**  
-String data types and string literal support are currently under development. The language presently supports only integer and character types. String functionality will be available in a future release.
+### 🚧 Output Functionality
+The `cdisplay()` function currently has the following limitations:
+- **Single Character Display**: Only one character can be displayed per `cdisplay()` call
+- **Multiple Characters**: Support for displaying multiple characters in a single call is under development
+- **Automatic Line Breaks**: Each `cdisplay()` statement automatically includes a newline character—manual line break control is not yet available
 
-These features are planned for implementation in upcoming versions. We appreciate your patience as we continue to develop the Amadeus ecosystem.
+**Workaround**: To display multiple characters, use separate `cdisplay()` calls for each character.
+
+---
+
+**Report Issues**: Use the [GitHub issue tracker](https://github.com/kirisu111503/amadeus-PL/issues) to report bugs or request features.
+
+---
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
 
 ---
 
 ## Additional Resources
 
-For bug reports, feature requests, or contributions, please refer to the project repository or contact the development team.
+- **Repository**: [GitHub - kirisu111503/amadeus-PL](https://github.com/kirisu111503/amadeus-PL)
+- **Bug Reports**: [GitHub Issues](https://github.com/kirisu111503/amadeus-PL/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/kirisu111503/amadeus-PL/discussions)
 
----
+For questions, suggestions, or contributions, feel free to open an issue or start a discussion on GitHub.
 
-**© 2024 Amadeus IDE Development Team** | *Built for developers who value simplicity and performance*
+<p align="center">
+  <strong>© 2024 Amadeus IDE Development Team</strong><br>
+  <em>Built for developers who value simplicity and performance</em>
+</p>
+
+<p align="center">
+  Made with 💚
+</p>
+
+<p align="center">
+  <em>El Psy Congroo!</em>
+</p>
