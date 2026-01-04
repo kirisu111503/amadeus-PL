@@ -1,0 +1,2 @@
+int a;int x, y, b;
+int z = (1+2)*3

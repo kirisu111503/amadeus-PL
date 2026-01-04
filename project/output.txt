@@ -1,0 +1,17 @@
+    .data
+a: .word 0, 0
+x: .word 0, 0
+y: .word 0, 0
+b: .word 0, 0
+z: .word 0, 0
+
+    .text
+main:
+    daddiu r2, r0, 1
+    daddiu r3, r0, 2
+    daddu r2, r2, r3
+    daddiu r3, r0, 3
+    dmult r2, r3
+    mflo r2
+    sd r2, z(r0)
+    daddiu r2, r0, 0

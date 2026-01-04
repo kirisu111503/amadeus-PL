@@ -1,0 +1,2 @@
+char x = 'a'; int a = 1;, int b = a;
+cdisplay(a);

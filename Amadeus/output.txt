@@ -1,0 +1,10 @@
+    .data
+x: .word 0, 0
+
+    .text
+main:
+    daddiu r2, r0, 1
+    sd r2, x(r0)
+    ld r2, x(r0)
+    daddiu r3, r0, 2
+    daddu r2, r2, r3

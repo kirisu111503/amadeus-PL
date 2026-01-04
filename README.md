@@ -1,0 +1,1 @@
+Just open the amadeus shortcut
